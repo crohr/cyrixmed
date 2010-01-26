@@ -1,0 +1,35 @@
+20090126
+- Removed deprecated session_is_registered function and replaced with isset($_SESSION["var"])
+=> 1.4.1
+
+20050822
+- Ajout d'un module de planning multi-utilisateur.
+- refonte de l'administration.
+- editeur HTML pour les entetes
+- installeur "tout-en-un" pour windows.
+=> 1.4
+
+20040620
+- Mise à jour du logiciel pour une compatibilité avec EasyPHP 1.7 !
+- Refonte du code de la plupart des pages et notamment de la page d'identification et choix de patient pour une sécurité accrue
+- Section d'administration modifiée : raffraichissement automatique des pages après ajout/suppression/modification. Correction de bugs dans la gestion des docteurs/secretaire.
+=> 1.3b
+
+20040218
+- Création d'une section administration : il est maintenant possible d'ajouter/modifier/supprimer les enregistrements des listes et de gérer les comptes des docteurs/secrétaires.
+- Script d'installation des tables intégré.
+- Verification lors de l'ajout ou modification qu'un nom et prénom est bien entré.
+- Gestion de la(les) secrétaire(s) simplifiée et possibilité de définir plusieurs comptes secrétaire.
+- faille de type XSS non-permanent corrigée.
+- correction de bugs dans l'impression des ordonnances
+=> 1.2b
+
+20030821
+- champs n° adhérent inséré
+- amélioration sécurité
+=> 1.1b
+
+20030724
+- Modification ajouter.php et modifier.php pour que la touche TAB suive l'ordre des champs dans la partie administrative.
+- Suppression du javascript de vérification d'identification
+=> 1.1

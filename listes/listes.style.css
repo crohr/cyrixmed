@@ -1,0 +1,57 @@
+BODY {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+TD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+INPUT {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+}
+TEXTAREA {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+}
+SELECT {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+}
+.titres_tab {
+font-family:verdana;
+font-style:normal;
+font-weight:bold;
+color:black;
+font-size:14px;
+background-color:#F9F9FB;
+} 
+.contenu_tab {
+font-family:verdana;
+font-style:normal;
+font-weight:normal;
+color:black;
+font-size:10px;
+} 
+A:link {
+	COLOR: #343482; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #343482; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+.erreur {
+    font-family : Arial, serif;
+    font-size : 12px;
+    color : red;
+    text-decoration : none;
+    font-weight : bold;
+}
