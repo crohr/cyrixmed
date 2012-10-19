@@ -461,7 +461,7 @@ function afficheRDV($jour,$mois,$annee,$tabPatients,$param) {
 							}
 							$outputRDV.='</table>';
 					} else {
-						//$outputRDV='<br />Pas de rendez-vous ce jour';
+						$outputRDV='<br />Pas de rendez-vous ce jour';
 					}
 						return $outputRDV;
 				}

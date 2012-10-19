@@ -186,7 +186,7 @@ $res_infos=mysql_fetch_array($select_patient);
        			 </tr>
        			 <tr align="center">
           			<td align="center" valign="top">
-             		<textarea name="observations1" rows="2" cols="80"><?echo "&raquo $DateJourFR : ";?></textarea><br>
+             		<textarea name="observations1" rows="2" cols="80"><?= "&raquo $DateJourFR : ";?></textarea><br>
             		<textarea name="observations2" rows="8" cols="80"><?=$res_infos["observations"]?></textarea>
             		</td>
         		</tr>
@@ -256,7 +256,7 @@ f.submit();
        			 </tr>
 				 <tr align="center">
           			<td valign="top">
-             		<textarea name="medicaments_ald" rows="15" cols="80"><?echo "".$res_infos["sauv_ordonnance_medicald"]."\n";?></textarea>
+             		<textarea name="medicaments_ald" rows="15" cols="80"><?= $res_infos["sauv_ordonnance_medicald"]."\n";?></textarea>
             		</td>
         		</tr>
 				<?php
@@ -270,7 +270,7 @@ f.submit();
        			 </tr>
 				 <tr align="center">
           			<td valign="top">
-             		<textarea name="medicaments" rows="15" cols="80"><?echo "".$res_infos["sauv_ordonnance_medic"]."\n";?></textarea>
+             		<textarea name="medicaments" rows="15" cols="80"><?= $res_infos["sauv_ordonnance_medic"]."\n";?></textarea>
             		</td>
         		</tr>
         		<tr align="center">

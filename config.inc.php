@@ -1,4 +1,4 @@
-<?
+<?php
 // ----------------- CONNEXION MYSQL ------------------
 $serveur='localhost';
 $user='root';
