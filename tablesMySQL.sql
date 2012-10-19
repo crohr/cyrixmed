@@ -1,20 +1,20 @@
 -- phpMyAdmin SQL Dump
 -- version 2.6.3-pl1
 -- http://www.phpmyadmin.net
--- 
+--
 -- Serveur: localhost
 -- Généré le : Lundi 29 Août 2005 à 20:32
 -- Version du serveur: 4.1.12
 -- Version de PHP: 5.0.4
--- 
+--
 -- Base de données: `cyrixmedv14`
--- 
+--
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_docteurs`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_docteurs`;
 CREATE TABLE `idoc_docteurs` (
@@ -29,11 +29,11 @@ CREATE TABLE `idoc_docteurs` (
   `activation` enum('Y','N') NOT NULL default 'N',
   `statut` enum('docteur','secretaire') NOT NULL default 'docteur',
   UNIQUE KEY `id` (`id`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
--- 
+--
 -- Contenu de la table `idoc_docteurs`
--- 
+--
 
 INSERT INTO `idoc_docteurs` (`id`, `mdp`, `nom`, `prenom`, `entete`, `couleur`, `sauv_medic`, `sauv_medicald`, `activation`, `statut`) VALUES ('cyril', '16', 'ROHR', 'Cyril', '', '#FFE361', '', '', 'Y', 'docteur'),
 ('secretaire', 'secretaire', 'NomSecretaire', 'PrenomSecretair', '', '', 'sdfsdfsdfsdfsdfsdfsdfsdsdfsdff', 'sdfsdfdsfsdfsdf', 'Y', 'secretaire'),
@@ -42,9 +42,9 @@ INSERT INTO `idoc_docteurs` (`id`, `mdp`, `nom`, `prenom`, `entete`, `couleur`, 
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_infospatients`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_infospatients`;
 CREATE TABLE `idoc_infospatients` (
@@ -94,19 +94,19 @@ CREATE TABLE `idoc_infospatients` (
   `sauv_ordonnance_medic` text NOT NULL,
   `sauv_ordonnance_medicald` text NOT NULL,
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=4 ;
 
--- 
+--
 -- Contenu de la table `idoc_infospatients`
--- 
+--
 
 INSERT INTO `idoc_infospatients` (`id`, `titre`, `nom`, `nom_jf`, `prenom`, `date_naissance`, `sexe_fratrie`, `statut`, `adresse`, `codepost`, `ville`, `num_secu`, `profession`, `tel_perso`, `tel_travail`, `cmu`, `option_ref`, `atcd`, `infos`, `nom_mutuelle`, `adresse_mutuelle`, `ville_mutuelle`, `num_adherent`, `nom_caisse`, `adresse_caisse`, `ville_caisse`, `creation_dossier`, `chirobst`, `atcd_fam`, `tabac`, `alcool`, `terrain`, `autres`, `precautions`, `surveillance`, `allergies`, `correspondants`, `sport`, `vaccins`, `pathologies_chroniques`, `ald`, `autres_infos`, `observations`, `sauv_ordonnance_medic`, `sauv_ordonnance_medicald`) VALUES (1, 'Mr', 'NomDeTest', '', 'PrénomDeTest', '1945-12-15', '', '', '30 rue du chapeau blanc', '', 'LABAS - 11111', '075 1473214 58', 'Retraité', '038476XXXX', '038476XXXX', '2002-04-15', '2000-02-08', '- Test\r\n\r\n', 'Colérique\r\n', 'Matmut', 'XXX', 'XXX', '158752', 'CPAM', 'XXX', 'XXX', '2003-09-11', '', '', '3p/j', '5v/j', '', '', '', '', '', '-  DUPONT BARRON Régine\r\n\r\n', '', 'TP 1995\r\n', '', '', '', '» 11-09-2003 : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 175cm - 90kg - 12 - 5/min\n', '', '');
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_liste_atcd_medicaux`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_liste_atcd_medicaux`;
 CREATE TABLE `idoc_liste_atcd_medicaux` (
@@ -114,19 +114,19 @@ CREATE TABLE `idoc_liste_atcd_medicaux` (
   `atcd` varchar(100) NOT NULL default '',
   `precisions` varchar(100) NOT NULL default '',
   KEY `id` (`id`)
-) TYPE=MyISAM AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM AUTO_INCREMENT=5 ;
 
--- 
+--
 -- Contenu de la table `idoc_liste_atcd_medicaux`
--- 
+--
 
 INSERT INTO `idoc_liste_atcd_medicaux` (`id`, `atcd`, `precisions`) VALUES (4, 'sdgd', 'gdfg');
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_liste_correspondants`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_liste_correspondants`;
 CREATE TABLE `idoc_liste_correspondants` (
@@ -136,11 +136,11 @@ CREATE TABLE `idoc_liste_correspondants` (
   `adresse` varchar(255) NOT NULL default '',
   `tel` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=33 ;
+) ENGINE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=33 ;
 
--- 
+--
 -- Contenu de la table `idoc_liste_correspondants`
--- 
+--
 
 INSERT INTO `idoc_liste_correspondants` (`id`, `specialite`, `nom`, `adresse`, `tel`) VALUES (1, 'Ves angio', ' BUISSON Sylvie', '1 quai René VEIL', '0384 969800'),
 (2, 'Ves cardio', ' PICHON', '6 rue de Verdun', '0384 766323'),
@@ -176,9 +176,9 @@ INSERT INTO `idoc_liste_correspondants` (`id`, `specialite`, `nom`, `adresse`, `
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_liste_medicaments`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_liste_medicaments`;
 CREATE TABLE `idoc_liste_medicaments` (
@@ -187,11 +187,11 @@ CREATE TABLE `idoc_liste_medicaments` (
   `posologie` varchar(255) default NULL,
   `indications` varchar(100) default NULL,
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=1828 ;
+) ENGINE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=1828 ;
 
--- 
+--
 -- Contenu de la table `idoc_liste_medicaments`
--- 
+--
 
 INSERT INTO `idoc_liste_medicaments` (`id`, `nom`, `posologie`, `indications`) VALUES (1, 'ASTEMIZOLE', 'COMP. 10 MG', NULL),
 (2, 'ASTEMIZOLE', 'SUSP.BUV. 2 MG/ML', NULL),
@@ -2023,9 +2023,9 @@ INSERT INTO `idoc_liste_medicaments` (`id`, `nom`, `posologie`, `indications`) V
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_liste_signes_cliniques`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_liste_signes_cliniques`;
 CREATE TABLE `idoc_liste_signes_cliniques` (
@@ -2033,11 +2033,11 @@ CREATE TABLE `idoc_liste_signes_cliniques` (
   `nom` varchar(255) NOT NULL default '',
   `commentaire` varchar(100) NOT NULL default '',
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=55 ;
+) ENGINE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=55 ;
 
--- 
+--
 -- Contenu de la table `idoc_liste_signes_cliniques`
--- 
+--
 
 INSERT INTO `idoc_liste_signes_cliniques` (`id`, `nom`, `commentaire`) VALUES (1, 'Angine EP', ''),
 (2, 'Angine E', ''),
@@ -2094,9 +2094,9 @@ INSERT INTO `idoc_liste_signes_cliniques` (`id`, `nom`, `commentaire`) VALUES (1
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_liste_surveillance`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_liste_surveillance`;
 CREATE TABLE `idoc_liste_surveillance` (
@@ -2104,11 +2104,11 @@ CREATE TABLE `idoc_liste_surveillance` (
   `examen` varchar(150) NOT NULL default '',
   `commentaire` varchar(150) NOT NULL default '',
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=62 ;
+) ENGINE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=62 ;
 
--- 
+--
 -- Contenu de la table `idoc_liste_surveillance`
--- 
+--
 
 INSERT INTO `idoc_liste_surveillance` (`id`, `examen`, `commentaire`) VALUES (1, ' Dopler des Vaisseaux du cou', '6 m puis ts les ans'),
 (2, ' Echographie Abdominale', ''),
@@ -2174,9 +2174,9 @@ INSERT INTO `idoc_liste_surveillance` (`id`, `examen`, `commentaire`) VALUES (1,
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_liste_traitements_locaux`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_liste_traitements_locaux`;
 CREATE TABLE `idoc_liste_traitements_locaux` (
@@ -2185,19 +2185,19 @@ CREATE TABLE `idoc_liste_traitements_locaux` (
   `posologie` varchar(255) NOT NULL default '',
   `indications` varchar(100) NOT NULL default '',
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=2 ;
 
--- 
+--
 -- Contenu de la table `idoc_liste_traitements_locaux`
--- 
+--
 
 INSERT INTO `idoc_liste_traitements_locaux` (`id`, `nom`, `posologie`, `indications`) VALUES (1, 'test', 'testposo', 'testindoc');
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_liste_trucs`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_liste_trucs`;
 CREATE TABLE `idoc_liste_trucs` (
@@ -2205,20 +2205,20 @@ CREATE TABLE `idoc_liste_trucs` (
   `truc` varchar(100) NOT NULL default '',
   `explication` varchar(150) NOT NULL default '',
   KEY `id` (`id`)
-) TYPE=MyISAM AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM AUTO_INCREMENT=4 ;
 
--- 
+--
 -- Contenu de la table `idoc_liste_trucs`
--- 
+--
 
 INSERT INTO `idoc_liste_trucs` (`id`, `truc`, `explication`) VALUES (3, 'bvn', 'vbn'),
 (2, 'Test', 'testex');
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_liste_vaccins`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_liste_vaccins`;
 CREATE TABLE `idoc_liste_vaccins` (
@@ -2227,11 +2227,11 @@ CREATE TABLE `idoc_liste_vaccins` (
   `quantite` varchar(255) NOT NULL default '',
   `renseignements` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`id`)
-) TYPE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM PACK_KEYS=1 AUTO_INCREMENT=12 ;
 
--- 
+--
 -- Contenu de la table `idoc_liste_vaccins`
--- 
+--
 
 INSERT INTO `idoc_liste_vaccins` (`id`, `nom`, `quantite`, `renseignements`) VALUES (1, 'vaccin antigrippe', '1 boite', ''),
 (2, 'vaccin REVAXIS', '1 boite', 'DTP atténué'),
@@ -2247,9 +2247,9 @@ INSERT INTO `idoc_liste_vaccins` (`id`, `nom`, `quantite`, `renseignements`) VAL
 
 -- --------------------------------------------------------
 
--- 
+--
 -- Structure de la table `idoc_planning`
--- 
+--
 
 DROP TABLE IF EXISTS `idoc_planning`;
 CREATE TABLE `idoc_planning` (
@@ -2261,10 +2261,10 @@ CREATE TABLE `idoc_planning` (
   `commentaires` tinytext NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `id` (`id`)
-) TYPE=MyISAM AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM AUTO_INCREMENT=5 ;
 
--- 
+--
 -- Contenu de la table `idoc_planning`
--- 
+--
 
 INSERT INTO `idoc_planning` (`id`, `idDocteur`, `dateDebut`, `dateFin`, `idPatient`, `commentaires`) VALUES (1, 'docteur', '2005-08-27 11:30:00', '2005-08-27 11:30:00', 1, 'commentaires');
